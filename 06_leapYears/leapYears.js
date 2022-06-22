@@ -1,4 +1,10 @@
 const leapYears = function() {
+const year = 2000;
+
+if(year%4==0){
+    return true;
+
+}
 
 };
 
