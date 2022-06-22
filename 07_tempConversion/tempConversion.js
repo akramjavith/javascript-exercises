@@ -1,5 +1,5 @@
 const ftoc = function() {
-  let fahrenheit=32;
+let fahrenheit=32;
   let ftoc=Math.floor(fahrenheit-32)*5/9;
   return ftoc;
 };
