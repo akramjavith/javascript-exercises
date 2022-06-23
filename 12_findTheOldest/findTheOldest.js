@@ -1,16 +1,16 @@
-const findTheOldest = function() {
-    var year_born = prompt("Please enter your date of birth:", "Type here");
-var d = new Date();
-var n = d.getFullYear();
-function getAge(birthYear){
-	var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
-    age = currentYear - birthYear;
-    return age;
-}
-calculatedAge = getAge(year_born);
-alert("Hello, " + "you are " + calculatedAge + " years old!");
-};
+const findTheOldest = function(people) {
+    let total = 0
+    let OldestPerson = {}
+    people.reduce((prev, curr) => {
+      if ((curr.yearOfDeath - curr.yearOfBirth) > total) {
+        total = (curr.yearOfDeath - curr.yearOfBirth);
+        OldestPerson = curr
+      }
+      return prev;
+    })
+    return OldestPerson
+  }
+
 
 // Do not edit below this line
 module.exports = findTheOldest;
